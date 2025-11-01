@@ -1,0 +1,95 @@
+@inherits Statiq.Razor.StatiqRazorPage<IDocument>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@Document.GetString("Title", "Simon Budden")</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #333;
+        }
+        body {
+            margin: 0;
+            background: #fffdfb;
+            line-height: 1.6;
+        }
+        header {
+            background: #eadbd3;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        nav a {
+            color: #3a2e2a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #a57c65;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 5rem;
+        }
+        h1, h2, h3 {
+            color: #a57c65;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: #eadbd3;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #3a2e2a;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        a {
+            color: #a57c65;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#interests">Interests</a>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        &copy; @(DateTime.Now.Year) Simon Budden
+    </footer>
+</body>
+</html
