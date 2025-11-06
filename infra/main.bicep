@@ -18,11 +18,8 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   }
   kind: 'StorageV2'
   properties: {
-    staticWebsite: {
-      enabled: true
-      indexDocument: indexDocument
-      error404Document: errorDocument
-    }
+    supportsHttpsTrafficOnly: true
+    allowBlobPublicAccess: true
   }
 }
 
