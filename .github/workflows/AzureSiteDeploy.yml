@@ -1,1 +1,45 @@
+name: AzureSiteDeploy
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build Statiq site
+        run: dotnet run --project ./pers_site_statiq.csproj
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy Bicep template
+        run: |
+          az deployment group create \
+            --resource-group personalwebsite-uksouth-rg \
+            --template-file infra/main.bicep \
+            --parameters storageAccountName=simonbuddenweb
+
+      - name: Upload website content
+        run: |
+          az storage blob upload-batch \
+            --account-name simonbuddenweb \
+            --auth-mode login \
+            -s ./output \
+            -d '$web'
