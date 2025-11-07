@@ -58,11 +58,24 @@ resource origin 'Microsoft.Cdn/profiles/originGroups/origins@2023-05-01' = {
   name: 'storage-origin'
   parent: originGroup
   properties: {
-    hostName: '${storageAccount.name}.z33.web.core.windows.net'
+    hostName: '${storageAccount.name}.z33.web.${environment().suffixes.storage}'
     httpsPort: 443
-    originHostHeader: '${storageAccount.name}.z33.web.core.windows.net'
+    originHostHeader: '${storageAccount.name}.z33.web.${environment().suffixes.storage}'
     priority: 1
     weight: 1000
+  }
+}
+
+
+resource customDomain 'Microsoft.Cdn/profiles/customDomains@2025-06-01' = {
+  name: 'simonbudden-dev'
+  parent: frontDoorProfile
+  properties: {
+    hostName: customDomainName
+    tlsSettings:{
+      certificateType: 'ManagedCertificate'
+      minimumTlsVersion: 'TLS12'
+    }
   }
 }
 
@@ -73,6 +86,11 @@ resource route 'Microsoft.Cdn/profiles/afdEndpoints/routes@2023-05-01' = {
     origin
   ]
   properties: {
+    customDomains:[
+      {
+        id: customDomain.id
+      }
+    ]
     originGroup: {
       id: originGroup.id
     }
@@ -85,24 +103,6 @@ resource route 'Microsoft.Cdn/profiles/afdEndpoints/routes@2023-05-01' = {
     forwardingProtocol: 'MatchRequest'
     httpsRedirect: 'Enabled'
     enabledState: 'Enabled'
-  }
-}
-
-resource customDomain 'Microsoft.Cdn/profiles/customDomains@2025-06-01' = {
-  name: 'simonbudden-dev'
-  parent: frontDoorProfile
-  properties: {
-    hostName: customDomainName
-  }
-}
-
-resource customDomainHttps 'Microsoft.Cdn/profiles/customDomains/customHttpsConfigurations@2023-05-01' = {
-  name: 'https-config'
-  parent: customDomain
-  properties: {
-    certificateType: 'ManagedCertificate'
-    protocolType: 'ServerNameIndication'
-    minimumTlsVersion: 'TLS1_2'
   }
 }
 
