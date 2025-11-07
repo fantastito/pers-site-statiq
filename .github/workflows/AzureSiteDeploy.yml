@@ -36,10 +36,17 @@ jobs:
             --template-file infra/main.bicep \
             --parameters storageAccountName=simonbuddenweb
 
-      - name: Upload website content
+      - name: Empty storage and deploy static website
         run: |
+          az storage blob delete-batch \
+            --account-name simonbuddenweb \
+            --auth-mode login \
+            -s '$web'
+
           az storage blob upload-batch \
             --account-name simonbuddenweb \
             --auth-mode login \
             -s ./output \
-            -d '$web'
+            -d '$web' \
+            --overwrite true \
+            --verbose
