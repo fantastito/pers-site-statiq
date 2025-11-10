@@ -34,6 +34,7 @@ jobs:
           az deployment group create \
             --resource-group personalwebsite-uksouth-rg \
             --template-file infra/main.bicep \
+            --mode Complete \
             --parameters storageAccountName=simonbuddenweb
 
       - name: Empty storage and deploy static website
