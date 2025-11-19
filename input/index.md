@@ -3,17 +3,21 @@ Title: "simonbudden.dev"
 Description: "Software developer portfolio"
 Layout: "_Layout.cshtml"
 ---
+<div class="hero-container">
+    <img src="/assets/images/IMG_0305.jpg" alt="Glass and steel cannopy at the Royal Botanic Gardens, Brussels" class="hero-image">
+    <div class="overlay-text">Simon Budden</div>
+</div>
 
-# Simon Budden
 **Software Developer**  
 London, UK [<img src="/assets/githubMark.png" alt="Link to GitHub profile" class="social-icon">](https://www.github.com/fantastito)
 [<img src="/assets/linkedInMark.png" alt="Link to LinkedIn profile" class="social-icon">](https://www.linkedin.com/in/simon-budden-0b280518/)
 
 Creative, practical, experienced. Simon is a software developer with 10 years’ experience interpreting the European Union in Brussels and analysing policy in London. Now a .NET developer, coding brings together the different strands of his career and passions.
 
----
-
-## Experience
+<div class="hero-container">
+    <img src="/assets/images/IMG_1505.jpg" alt="Bluebells flower in West Woods, Wiltshire" class="banner-image">
+    <div class="overlay-text">Experience</div>
+</div>
 
 ### Islington Council
 **Software Developer**  
@@ -61,9 +65,10 @@ Creative, practical, experienced. Simon is a software developer with 10 years’
 - Created engaging materials for print and digital channels.  
 - Managed high-visibility projects to improve Brussels visitor experience.  
 
----
-
-## Projects
+<div class="hero-container">
+    <img src="/assets/images/IMG_2408.jpg" alt="Wildebeest cross the Ngorongoro crater, Tanzania" class="banner-image">
+    <div class="overlay-text">Projects</div>
+</div>
 
 ### [simonbudden.dev](https://github.com/fantastito/pers-site-statiq)
 A personal portfolio site showcasing projects and experience.  
@@ -88,9 +93,11 @@ A social media web app developed from legacy code.
 An iOS frontend for a MERN social media app developed from a seed repo.  
 **Tech:** SwiftUI, Xcode, Cloudinary, Postman, Trello
 
----
 
-## Interests
+<div class="hero-container">
+    <img src="/assets/images/IMG_0346.jpg" alt="Flowers in bloom, De Brigaand, Belgium" class="banner-image">
+    <div class="overlay-text">Interests</div>
+</div>
 
 📷 Photography
 ⛰️ Hiking
