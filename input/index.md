@@ -6,16 +6,10 @@ Layout: "_Layout.cshtml"
 
 # Simon Budden
 **Software Developer**  
-London, UK
-🌐 [GitHub](https://www.github.com/fantastito) | [LinkedIn](https://www.linkedin.com/in/simon-budden-0b280518/)
+London, UK [<img src="/assets/githubMark.png" alt="Link to GitHub profile" class="social-icon">](https://www.github.com/fantastito)
+[<img src="/assets/linkedInMark.png" alt="Link to LinkedIn profile" class="social-icon">](https://www.linkedin.com/in/simon-budden-0b280518/)
 
----
-
-Creative, practical, experienced.  
-
-Simon is a software developer with 10 years’ experience interpreting the European Union in Brussels and analysing policy in London.
-
-Now a .NET developer, coding brings together the different strands of his career and passions.
+Creative, practical, experienced. Simon is a software developer with 10 years’ experience interpreting the European Union in Brussels and analysing policy in London. Now a .NET developer, coding brings together the different strands of his career and passions.
 
 ---
 
