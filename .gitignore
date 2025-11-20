@@ -3,6 +3,10 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# Statiq.web
+cache/
+output/
+
 # dotenv files
 .env
 
