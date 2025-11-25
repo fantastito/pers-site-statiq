@@ -4,7 +4,10 @@ Description: "Software developer portfolio"
 Layout: "_Layout.cshtml"
 ---
 <div class="hero-container" id="top">
-    <img src="/assets/images/IMG_0305.jpg" alt="Glass and steel cannopy at the Royal Botanic Gardens, Brussels. © Simon Budden 2025" class="hero-image">
+    <picture>
+        <source srcset="/assets/images/IMG_0305-w1920.webp" type="image/webp">
+        <img src="/assets/images/IMG_0305.jpg" alt="Glass and steel cannopy at the Royal Botanic Gardens, Brussels. © Simon Budden 2025" class="hero-image" loading="eager">
+    </picture>
     <div class="overlay-text">Simon Budden</div>
 </div>
 
@@ -15,7 +18,10 @@ London, UK [<img src="/assets/githubMark.png" alt="Link to GitHub profile" class
 Creative, practical, experienced. Simon is a software developer with 10 years’ experience interpreting the European Union in Brussels and analysing policy in London. Now a .NET developer, coding brings together the different strands of his career and passions.
 
 <div class="banner-container" id="experience">
-    <img src="/assets/images/IMG_1505.jpg" alt="Bluebells flower in West Woods, Wiltshire. © Simon Budden 2025" class="banner-image">
+    <picture>
+        <source srcset="/assets/images/IMG_1505-w1920.webp" type="image/webp">
+        <img src="/assets/images/IMG_1505.jpg" alt="Bluebells flower in West Woods, Wiltshire. © Simon Budden 2025" class="banner-image" loading="lazy">
+    </picture>
     <div class="overlay-text">Experience</div>
 </div>
 
@@ -66,7 +72,10 @@ Creative, practical, experienced. Simon is a software developer with 10 years’
 - Managed high-visibility projects to improve Brussels visitor experience.  
 
 <div class="banner-container" id="projects">
-    <img src="/assets/images/IMG_2408.jpg" alt="Wildebeest cross the Ngorongoro crater, Tanzania. © Simon Budden 2025" class="banner-image">
+    <picture>
+        <source srcset="/assets/images/IMG_2408-w1920.webp" type="image/webp">
+        <img src="/assets/images/IMG_2408.jpg" alt="Wildebeest and zebra cross the Ngorongoro crater, Tanzania. © Simon Budden 2025" class="banner-image" loading="lazy">
+    </picture>
     <div class="overlay-text">Projects</div>
 </div>
 
@@ -95,7 +104,10 @@ An iOS frontend for a MERN social media app developed from a seed repo.
 
 
 <div class="banner-container" id="interests">
-    <img src="/assets/images/IMG_0346.jpg" alt="Flowers in bloom, De Brigaand, Belgium. © Simon Budden 2025" class="banner-image">
+    <picture>
+        <source srcset="/assets/images/IMG_0346-w1920.webp" type="image/webp">
+        <img src="/assets/images/IMG_0346.jpg" alt="Flowers in bloom, De Brigaand, Belgium. © Simon Budden 2025" class="banner-image" loading="lazy">
+    </picture>
     <div class="overlay-text">Interests</div>
 </div>
 
