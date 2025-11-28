@@ -3,10 +3,20 @@ Title: "simonbudden.dev"
 Description: "Software developer portfolio"
 Layout: "_Layout.cshtml"
 ---
+
 <div class="hero-container" id="top">
     <picture>
-        <source srcset="/assets/images/IMG_0305-w1920.webp" type="image/webp">
-        <img src="/assets/images/IMG_0305.jpg" alt="Glass and steel cannopy at the Royal Botanic Gardens, Brussels. © Simon Budden 2025" class="hero-image" loading="eager">
+        <source 
+            srcset="/assets/images/IMG_0305-w640.webp 640w,
+                    /assets/images/IMG_0305-w900.webp 900w,
+                    /assets/images/IMG_0305-w1200.webp 1200w,
+                    /assets/images/IMG_0305-w1920.webp 1920w" 
+            sizes="100vw"
+            type="image/webp">
+        <img src="/assets/images/IMG_0305-w1920.jpg" 
+             alt="Glass and steel cannopy at the Royal Botanic Gardens, Brussels. © Simon Budden 2025" 
+             class="hero-image" 
+             loading="eager">
     </picture>
     <div class="overlay-text">Simon Budden</div>
 </div>
@@ -19,8 +29,15 @@ Creative, practical, experienced. Simon is a software developer with 10 years’
 
 <div class="banner-container" id="experience">
     <picture>
-        <source srcset="/assets/images/IMG_1505-w1920.webp" type="image/webp">
-        <img src="/assets/images/IMG_1505.jpg" alt="Bluebells flower in West Woods, Wiltshire. © Simon Budden 2025" class="banner-image" loading="lazy">
+        <source 
+            srcset="/assets/images/IMG_1505-w640.webp 640w,
+                    /assets/images/IMG_1505-w900.webp 900w" 
+            sizes="(min-width: 932px) 900px, calc(100vw - 2rem)"
+            type="image/webp">
+        <img src="/assets/images/IMG_1505-w1920.jpg" 
+             alt="Bluebells flower in West Woods, Wiltshire. © Simon Budden 2025" 
+             class="banner-image" 
+             loading="lazy">
     </picture>
     <div class="overlay-text">Experience</div>
 </div>
@@ -73,8 +90,15 @@ Creative, practical, experienced. Simon is a software developer with 10 years’
 
 <div class="banner-container" id="projects">
     <picture>
-        <source srcset="/assets/images/IMG_2408-w1920.webp" type="image/webp">
-        <img src="/assets/images/IMG_2408.jpg" alt="Wildebeest and zebra cross the Ngorongoro crater, Tanzania. © Simon Budden 2025" class="banner-image" loading="lazy">
+        <source 
+            srcset="/assets/images/IMG_2408-w640.webp 640w,
+                    /assets/images/IMG_2408-w900.webp 900w" 
+            sizes="(min-width: 932px) 900px, calc(100vw - 2rem)"
+            type="image/webp">
+        <img src="/assets/images/IMG_2408-w1920.jpg" 
+             alt="Wildebeest and zebra cross the Ngorongoro crater, Tanzania. © Simon Budden 2025" 
+             class="banner-image" 
+             loading="lazy">
     </picture>
     <div class="overlay-text">Projects</div>
 </div>
@@ -105,8 +129,15 @@ An iOS frontend for a MERN social media app developed from a seed repo.
 
 <div class="banner-container" id="interests">
     <picture>
-        <source srcset="/assets/images/IMG_0346-w1920.webp" type="image/webp">
-        <img src="/assets/images/IMG_0346.jpg" alt="Flowers in bloom, De Brigaand, Belgium. © Simon Budden 2025" class="banner-image" loading="lazy">
+        <source 
+            srcset="/assets/images/IMG_0346-w640.webp 640w,
+                    /assets/images/IMG_0346-w900.webp 900w" 
+            sizes="(min-width: 932px) 900px, calc(100vw - 2rem)"
+            type="image/webp">
+        <img src="/assets/images/IMG_0346-w1920.jpg" 
+             alt="Flowers in bloom, De Brigaand, Belgium. © Simon Budden 2025" 
+             class="banner-image" 
+             loading="lazy">
     </picture>
     <div class="overlay-text">Interests</div>
 </div>
